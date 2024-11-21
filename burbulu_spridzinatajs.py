@@ -23,31 +23,5 @@ VID_Y = GARUMS / 2
 a.move(kuģa_id, VID_X, VID_Y)
 a.move(kuģa_id2, VID_X, VID_Y)
 
-KUĢA_ĀTR = 10
-def pārvietot_kuģi(notikums):
-    if notikums.keysym == 'Up':
-        a.move(kuģa_id, 0, -KUĢA_ĀTR)
-        a.move(kuģa_id2, 0, -KUĢA_ĀTR)
-    elif notikums.keysym == 'Down':
-        a.move(kuģa_id, 0, KUĢA_ĀTR)
-        a.move(kuģa_id2, 0, KUĢA_ĀTR)
-    elif notikums.keysym == 'Left':
-        a.move(kuģa_id, -KUĢA_ĀTR, 0)
-        a.move(kuģa_id2, KUĢA_ĀTR, 0)
-a.bind_all('<Key>', pārvietot_kuģi)
 
-from random import randint
-burb_id = list()
-burb_r = list()
-burb_ātrums = list()
-MIN_BURB_R = 10
-MAX_BURB_R = 30
-MAX_BURB_ĀTR = 10
-ATSTARPE = 100
-def izveidot_burbuli():
-    x = PLATUMS + ATSTARPE
-    Y = randint(0, GARUMS)
-    r = randint(MIN_BURB_R, MAX_BURB_R)
-    id1 - a.create_oval(x - r, y - r, x + r, y + r, outline='white')
-    burb_id.append(id1)
     
